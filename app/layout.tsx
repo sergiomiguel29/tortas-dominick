@@ -10,9 +10,8 @@ const sans = Manrope({ variable: "--font-sans", subsets: ["latin"], weight: ["40
 export const metadata: Metadata = {
   title: "Tortas Dominick | Momentos que se quedan contigo",
   description: "Tortas frescas, personalizadas y llenas de cariño. Elige tu sucursal Dominick y haz tu pedido por WhatsApp.",
-  icons: { icon: "/favicon.svg" },
-  openGraph: { title: "Tortas Dominick", description: "Momentos que saben mejor.", type: "website", images: [{ url: "/og.png", width: 1760, height: 917, alt: "Tortas Dominick — Momentos que saben mejor" }] },
-  twitter: { card: "summary_large_image", title: "Tortas Dominick", description: "Momentos que saben mejor.", images: ["/og.png"] },
+  openGraph: { title: "Tortas Dominick", description: "Momentos que saben mejor.", type: "website" },
+  twitter: { card: "summary", title: "Tortas Dominick", description: "Momentos que saben mejor." },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

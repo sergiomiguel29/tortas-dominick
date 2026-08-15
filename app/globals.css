@@ -211,3 +211,65 @@
   .home-footer .home-social{gap:8px;margin-top:4px}
   .home-footer .home-container.home-footer-grid>small{grid-column:1/-1!important;margin-top:0;padding-top:12px;font-size:8px;line-height:1.35}
 }
+
+/* Final responsive audit: preserve Dominick's desktop identity at every mobile width. */
+@media(max-width:768px){
+  .home-hero h1,.shop-hero h1,.builder-hero h1,.about-hero h1,.locations-page h1{font-size:clamp(2.4rem,10vw,3.5rem)}
+  .home-hero-copy>span,.shop-hero .shop-wrap>div:first-child>span,.builder-hero-inner>div:first-child>span,.about-hero>div>span,.locations-page>header>span{font-size:16px;line-height:1.55}
+  .home-btn,.shop-nav.open a,.home-nav.open a,.builder-nav button,.builder-send,.location-next>a{min-height:44px}
+  .home-section,.home-custom{padding-block:48px}
+  .about-manifesto,.about-closing{padding-block:48px}
+  .locations-page{padding-block:48px}
+  .home-hero-image img,.shop-hero-image img,.builder-hero-photo img,.about-hero-image img{object-fit:cover}
+  .shop-nav.open a[href="/arma-tu-torta"],.home-nav.open a[href="/arma-tu-torta"]{margin:10px 0;padding:0 16px;border:0;border-radius:8px;background:#a91643;color:#fff}
+  .shop-nav.open a[href="/arma-tu-torta"]::after,.home-nav.open a[href="/arma-tu-torta"]::after{color:#fff}
+  .builder-page .builder-shell{display:flex;flex-direction:column}
+  .builder-page .builder-shell>aside{order:1}
+  .builder-page .builder-work{order:2}
+  .builder-page .builder-summary{order:3;border-left:0;border-top:1px solid #e8dcd6;scroll-margin-top:74px}
+  .builder-page .builder-options button{min-height:150px}
+  .builder-page .builder-options b{font-size:20px}
+  .builder-page .builder-options small,.builder-work header p,.builder-summary label,.summary-row,.builder-note{font-size:16px}
+  .builder-summary input,.builder-summary textarea,.builder-summary select{width:100%;min-height:48px;font-size:16px}
+  .builder-summary textarea{height:92px}
+  .builder-nav{gap:10px}.builder-nav button{flex:1;font-size:14px}.builder-nav span{font-size:14px;white-space:nowrap}
+  .location-grid{grid-template-columns:1fr}
+  .location-grid h2{font-size:clamp(1.7rem,7vw,2.1rem)}
+  .location-grid p,.location-grid>button>span{font-size:16px}
+}
+
+@media(max-width:430px){
+  .home-page .home-container,.shop-wrap,.about-story,.about-values,.location-grid,.location-next{width:calc(100% - 36px)}
+  .home-products{grid-template-columns:1fr;gap:16px}
+  .home-card-image{aspect-ratio:4/3}
+  .home-products h3{font-size:23px}.home-products p{min-height:0;font-size:16px}.home-products a{font-size:14px;min-height:44px}
+  .home-categories{grid-template-columns:1fr 1fr;gap:12px}
+  .home-categories>a>span{font-size:18px}
+  .shop-catalog{padding-inline:18px}.shop-filters{margin-inline:-18px;padding-inline:18px}
+  .shop-grid article{grid-template-columns:1fr;min-height:0}
+  .shop-grid .shop-image{height:auto;min-height:0;aspect-ratio:4/3}
+  .shop-grid article>div:last-child{padding:18px}
+  .shop-grid h2{font-size:26px}.shop-grid p{font-size:16px;margin:9px 0 14px}.shop-grid a{font-size:14px;min-height:44px}
+  .shop-design-grid{grid-template-columns:1fr}.shop-design-grid article:last-child:nth-child(odd){grid-column:auto}.shop-design-grid article:last-child:nth-child(odd) .shop-image{aspect-ratio:4/3}
+  .shop-design-grid h2{font-size:26px}.shop-design-grid p{font-size:16px;min-height:0}.shop-design-grid a{font-size:14px}
+  .builder-page .builder-options{grid-template-columns:1fr}
+  .builder-page .builder-options button{min-height:132px;padding:20px}
+  .builder-nav{display:grid;grid-template-columns:1fr 1fr}.builder-nav span{grid-column:1/-1;grid-row:1;text-align:center}.builder-nav button{grid-row:2}
+  .home-footer{padding:32px 0 14px}
+  .home-footer .home-container.home-footer-grid{grid-template-columns:1fr!important;gap:22px!important}
+  .home-footer .home-container.home-footer-grid>div{align-items:flex-start!important;text-align:left!important;padding-top:18px!important;border-top:1px solid #ffffff18!important}
+  .home-footer .footer-brand{align-items:center!important;text-align:center!important;padding-top:0!important;border-top:0!important}
+  .home-footer .home-container>div>b{font-size:14px}.home-footer a,.home-footer span{min-height:32px;font-size:14px}
+  .home-footer .home-container.home-footer-grid>small{font-size:10px;text-align:center}
+}
+
+@media(max-width:390px){
+  .home-hero-copy,.shop-hero .shop-wrap>div:first-child,.builder-hero-inner>div:first-child{padding-left:18px;padding-right:18px}
+  .home-benefits article{min-height:88px}.home-benefits b{font-size:12px}.home-benefits span{font-size:11px}
+}
+
+@media(max-width:375px){
+  .home-hero-copy>div{grid-template-columns:1fr}.home-btn{width:100%}
+  .home-categories{gap:10px}.home-categories>a>span{font-size:17px}
+  .shop-hero h1,.builder-hero h1{font-size:2.35rem}
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SubHeader from "../components/SubHeader";
+import { WhatsAppLink } from "../components/Branches";
 
 export const metadata: Metadata = { title: "Diseños personalizados | Dominick" };
 
@@ -29,14 +30,14 @@ export default function Page() {
       <div className="shop-design-grid">
         {tipos.map((t, i) => <article key={t.n}>
           <div className={`shop-image crop-${t.c}`}><img src={t.i} alt={t.n} /></div>
-          <div><small>0{i + 1}</small><h2>{t.n}</h2><p>Preparamos cada detalle de acuerdo con tu celebración.</p><a href="https://wa.me/51954664351" target="_blank" rel="noreferrer">Cotizar diseño →</a></div>
+          <div><small>0{i + 1}</small><h2>{t.n}</h2><p>Preparamos cada detalle de acuerdo con tu celebración.</p><WhatsAppLink message={`Hola Dominick, quisiera cotizar un diseño de ${t.n}.`}>Cotizar diseño →</WhatsAppLink></div>
         </article>)}
       </div>
       <section className="shop-bottom">
-        <div><small>¿TIENES UNA IDEA ESPECIAL?</small><h2>La hacemos realidad contigo.</h2><a href="https://wa.me/51954664351" target="_blank" rel="noreferrer">Cuéntanos tu idea →</a></div>
+        <div><small>¿TIENES UNA IDEA ESPECIAL?</small><h2>La hacemos realidad contigo.</h2><a href="/arma-tu-torta">Arma tu torta →</a></div>
         <div className="crop-c"><img src="/images/dominick-3.jpg" alt="Torta personalizada" /></div>
       </section>
     </main>
-    <a className="shop-mobile-cta" href="https://wa.me/51954664351" target="_blank" rel="noreferrer">¿Tienes una idea especial?<b>Cotiza tu torta</b></a>
+    <a className="shop-mobile-cta" href="/arma-tu-torta">¿Tienes una idea especial?<b>Arma tu torta</b></a>
   </>;
 }

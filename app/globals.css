@@ -64,4 +64,7 @@
 /* Home product cards keep their content and calls to action aligned. */
 .home-hero-image:not(.clean-a) img{object-fit:cover;object-position:center center;transform:none}
 .home-products article{display:grid;grid-template-rows:auto auto 1fr auto}
+.home-top-actions,.shop-top-actions{display:flex;align-items:center;gap:18px;flex:none}.home-top-actions a,.shop-top-actions a{display:flex;align-items:center;gap:6px;white-space:nowrap}.home-top-actions svg,.shop-top-actions svg{width:15px;height:15px}.top-phone{font-weight:600}
+@media(max-width:900px){.top-social-label{display:none}.home-top-actions,.shop-top-actions{gap:12px}.home-top-actions a,.shop-top-actions a{margin-left:0!important}.home-top .home-container>p,.shop-top .shop-wrap>p{display:none}}
+@media(max-width:600px){.top-phone{display:none!important}.home-top-actions,.shop-top-actions{margin-left:auto}}
 :root{--site-container:1360px;--site-gutter:64px}.home-page .home-container{width:min(var(--site-container),calc(100% - var(--site-gutter)));max-width:none;margin-left:auto!important;margin-right:auto!important}

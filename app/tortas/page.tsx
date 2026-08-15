@@ -1,0 +1,1 @@
+import type { Metadata } from "next";import Catalog from "../components/Catalog";export const metadata:Metadata={title:"Catálogo de tortas | Dominick"};export default function Page(){return <Catalog/>}

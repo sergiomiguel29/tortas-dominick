@@ -60,4 +60,9 @@
 @media(min-width:901px) and (max-width:1099px){:root{--site-container:100%;--site-gutter:40px}}
 @media(max-width:900px){:root{--site-container:100%;--site-gutter:40px}.home-container,.shop-wrap,.about-story,.about-values,.location-grid,.location-next{width:calc(100% - var(--site-gutter))}.builder-hero-inner,.builder-shell{width:100%}.home-footer .home-container.home-footer-grid{width:calc(100% - var(--site-gutter))}}
 @media(max-width:600px){:root{--site-gutter:32px}.home-container,.shop-wrap,.about-story,.about-values,.location-grid,.location-next,.home-footer .home-container.home-footer-grid{width:calc(100% - var(--site-gutter))}}
+
+/* Home image polish: preserve the approved layout while improving framing. */
+.home-hero-image picture{display:block;width:100%;height:100%}
+.home-hero-image:not(.clean-a) img{object-fit:cover;object-position:center center;transform:none}
+.home-products article{display:grid;grid-template-rows:auto auto 1fr auto}
 :root{--site-container:1360px;--site-gutter:64px}.home-page .home-container{width:min(var(--site-container),calc(100% - var(--site-gutter)));max-width:none;margin-left:auto!important;margin-right:auto!important}

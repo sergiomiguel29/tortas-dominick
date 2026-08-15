@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { BranchButton, useBranch } from "./Branches";
+import NavIcon from "./NavIcon";
 
 function Icon({name}:{name:"pin"|"truck"|"instagram"|"whatsapp"|"menu"|"cake"}) {
   const paths = {
@@ -33,7 +34,7 @@ export default function SubHeader({active}:{active:string}) {
     </div></div>
     <header className="shop-header"><div className="shop-wrap">
       <a className="shop-logo" href="/"><b>Dominick</b><small>PASTELERÍA</small></a>
-      <nav aria-label="Navegación principal" className={open?"shop-nav open":"shop-nav"}>{links.map(([label,href])=><a onClick={()=>setOpen(false)} className={active===label?"active":""} href={href} key={href}>{label}</a>)}<div className="mobile-nav-social"><a href="https://www.instagram.com/tortas_dominick/" target="_blank" rel="noreferrer"><Icon name="instagram"/> Instagram</a><a href={whatsapp} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> WhatsApp</a></div></nav>
+      <nav aria-label="Navegación principal" className={open?"shop-nav open":"shop-nav"}>{links.map(([label,href])=><a onClick={()=>setOpen(false)} className={active===label?"active":""} href={href} key={href}><NavIcon name={label}/><span>{label}</span></a>)}<div className="mobile-nav-social"><a href="https://www.instagram.com/tortas_dominick/" target="_blank" rel="noreferrer"><Icon name="instagram"/> Instagram</a><a href={whatsapp} target="_blank" rel="noreferrer"><Icon name="whatsapp"/> WhatsApp</a></div></nav>
       <a className="shop-quote" href="/arma-tu-torta"><Icon name="cake"/> Arma tu torta</a>
       <button className="shop-menu" onClick={()=>setOpen(!open)} aria-expanded={open} aria-label={open?"Cerrar menú":"Abrir menú"}><Icon name="menu"/></button>
     </div></header>
